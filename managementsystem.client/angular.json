@@ -30,12 +30,16 @@
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
+           "assets": [
+  {
+    "glob": "**/*",
+    "input": "public",
+    "output": "/"
+  },
+  "src/favicon.ico",
+  "src/assets"
+],
+
             "styles": [
               "src/styles.css"
             ],
@@ -98,10 +102,17 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": [],
+         "styles": [
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "src/styles.css"
+],
+"scripts": [
+  "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+],
+
+
+           
+
             "karmaConfig": "karma.conf.js"
           }
         }

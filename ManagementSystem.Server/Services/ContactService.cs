@@ -67,5 +67,7 @@ namespace ManagementSystem.Server.Services
                 .AsNoTracking()
                 .ToList();
         }
+
+        //public d
     }
 }

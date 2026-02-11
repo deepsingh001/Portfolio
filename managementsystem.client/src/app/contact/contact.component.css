@@ -1,0 +1,82 @@
+
+        :root {
+            --accent: #00c896;
+            --bg: #0f1115;
+            --surface: #161a1f;
+            --border: rgba(255, 255, 255, 0.08);
+            --text-dim: #9ca3af;
+            --font-head: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            color: #fff;
+            font-family: var(--font-body);
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: var(--font-head);
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #0f1115;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+        }
+
+        .contact-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+        }
+
+        /* Inputs */
+        .form-control {
+            background: #111418;
+            border: 1px solid var(--border);
+            color: #fff;
+            border-radius: 12px;
+            padding: 12px;
+        }
+
+        .form-control:focus {
+            background: #111418;
+            border-color: var(--accent);
+            box-shadow: none;
+            color: #fff;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        /* Button */
+        .btn-accent {
+            background: var(--accent);
+            border: none;
+            border-radius: 30px;
+            padding: 10px 30px;
+            font-weight: 600;
+        }
+
+        .btn-accent:hover {
+            background: #fff;
+            color: #000;
+        }

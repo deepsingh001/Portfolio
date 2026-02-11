@@ -46,6 +46,11 @@ namespace ManagementSystem.Server.Controllers
             return Ok(contacts);
         }
 
+        //[HttpDelete]
+        //public IActionResult DeleteContact()
+        //{
+
+        //}
 
 
     }

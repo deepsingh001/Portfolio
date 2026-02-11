@@ -54,4 +54,6 @@ app.UseCors("AllowAngular");
 // 🔹 API endpoints
 app.MapControllers();
 
+app.MapFallbackToFile("index.html");
+
 app.Run();
