@@ -1,14 +1,14 @@
-﻿:root {
-  --accent: #7c3aed;
+﻿:host {
+    max-width: 1280px;
+    padding: 2rem;
+    text-align: center;
 }
 
-body {
-  background: #000;
-  color: #fff;
+th, td {
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
-.btn-accent {
-  background: var(--accent);
-  color: #fff;
-  border: none;
+table {
+    margin: 0 auto;
 }
