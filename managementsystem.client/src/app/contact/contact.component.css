@@ -1,26 +1,143 @@
-/* Styling for Form Inputs */
-.form-control {
-    border-radius: 8px;
-    padding: 12px;
-    transition: all 0.3s ease;
+:host {
+  --primary-red: 0 85% 50%;
+  --bg-dark: 0 0% 4%;
+  --card-bg: 0 0% 8%;
+  --border-color: 0 0% 16%;
+  --input-bg: 0 0% 12%;
 }
 
-.form-control:focus {
-    background-color: rgba(255, 255, 255, 0.05) !important;
-    border-color: var(--accent) !important;
-    box-shadow: none;
-    color: white;
+.contact-section {
+  background-color: hsl(var(--bg-dark));
+  min-height: 100vh;
+  color: white;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Matching the "card-custom" style from your ABOUT section */
-.card-custom {
-    background: rgba(255, 255, 255, 0.03); /* Or your specific card color */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
+/* Glow Effects */
+.glow-bg-top,
+.glow-bg-bottom {
+  position: fixed;
+  width: 350px;
+  height: 350px;
+  background: hsla(var(--primary-red), 0.08);
+  filter: blur(120px);
+  pointer-events: none;
 }
 
-.form-label {
-    letter-spacing: 1px;
-    opacity: 0.8;
+.glow-bg-top {
+  top: 0;
+  right: 0;
+}
+
+.glow-bg-bottom {
+  bottom: 0;
+  left: 0;
+}
+
+/* Card */
+.bg-card {
+  background-color: hsl(var(--card-bg));
+}
+
+.border-border {
+  border: 1px solid hsl(var(--border-color));
+}
+
+/* Text */
+.text-primary-custom {
+  color: hsl(var(--primary-red));
+}
+
+.text-gradient-red {
+  background: linear-gradient(135deg, #00c896, hsl(15 90% 50%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Form */
+.form-label-custom {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 0.4rem;
+}
+
+.form-control-custom {
+  background-color: hsl(var(--input-bg));
+  border: 1px solid hsl(var(--border-color));
+  color: white;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.form-control-custom:focus {
+  outline: none;
+  border-color: hsl(var(--primary-red));
+  box-shadow: 0 0 10px hsla(var(--primary-red), 0.3);
+}
+
+.btn-primary-custom {
+  background-color: hsl(var(--primary-red));
+  border: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.btn-primary-custom:hover {
+  filter: brightness(1.2);
+}
+
+/* Icons */
+.icon-box {
+  width: 32px;
+  height: 32px;
+  background: hsla(var(--primary-red), 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  color: hsl(var(--primary-red));
+}
+
+.contact-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Mobile Image Height */
+@media (max-width: 991px) {
+  .contact-img {
+    height: 250px;
+  }
+}
+
+.img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, hsl(var(--bg-dark) / 0.9), transparent);
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(0,0,0,0.5);
+  border: 1px solid hsl(var(--border-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: hsl(var(--primary-red));
+  border-color: hsl(var(--primary-red));
+}
+
+.text-green-custom {
+  color: #00c896;
 }

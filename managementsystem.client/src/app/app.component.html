@@ -1,4 +1,40 @@
-﻿
+﻿<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#" style="color:var(--accent)">DEEP SINGH</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-content="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="mx-auto">
+                    <a href="#home" class="nav-link-custom">HOME</a>
+                    <a href="#about" class="nav-link-custom">ABOUT</a>
+                    <a href="#projects" class="nav-link-custom">WORK</a>
+                    <a routerLink="/contact" class="nav-link-custom">CONTACT</a>
+                </div>
+                <a href="#contact" class="btn btn-accent btn-sm d-none d-lg-block">LET'S TALK</a>
+            </div>
+        </div>
+    </nav>
 
 <router-outlet></router-outlet> 
+
+
+ <footer id="contact">
+        <div class="container text-center">
+            <h2 class="display-4 fw-bold mb-4">Let’s build something great.</h2>
+            <p class="mb-5 lead text-muted">Available for freelance opportunities and full-time roles.</p>
+            
+            <div class="mb-5">
+                <a href="#" class="social-icon">GitHub</a>
+                <a href="#" class="social-icon">LinkedIn</a>
+                <a href="#" class="social-icon">X (Twitter)</a>
+            </div>
+
+            <p class="small opacity-50">© 2026 Deep Singh. Handcrafted by me.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 

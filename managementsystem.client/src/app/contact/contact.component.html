@@ -1,88 +1,128 @@
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-black border-bottom border-secondary">
-  <div class="container">
-    <a class="navbar-brand fw-bold text-success" href="#">DEEP SINGH</a>
-    <div class="d-none d-lg-flex gap-4">
-      <a href="#home" class="nav-link text-light">Home</a>
-      <a href="#about" class="nav-link text-light">About</a>
-      <a href="#projects" class="nav-link text-light">Work</a>
-      <a href="#contact" class="nav-link text-light">Contact</a>
-    </div>
-    <a href="#contact" class="btn btn-success btn-sm rounded-pill px-4">Let's Talk</a>
-  </div>
-</nav>
+<section class="contact-section d-flex align-items-center justify-content-center p-3 p-md-5">
 
-<!-- HERO -->
-<section id="home" class="vh-100 d-flex align-items-center bg-black text-white">
+  <div class="glow-bg-top"></div>
+  <div class="glow-bg-bottom"></div>
+
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6">
-        <h1 class="display-4 fw-bold mb-3">
-          I build modern <br> web experiences.
-        </h1>
-        <p class="text-secondary mb-4">
-          Full-stack developer focused on clean UI & scalable backend solutions.
-        </p>
-        <div class="d-flex gap-3">
-          <a href="#projects" class="btn btn-success rounded-pill px-4">View Work</a>
-          <a href="#about" class="btn btn-outline-light rounded-pill px-4">About Me</a>
+    
+    <div class="mb-2 text-center">
+      
+      <h4 class="display-5 fw-bold text-white">
+      <p class="text-green-custom text-uppercase small m-1">Get In Touch</p>
+      </h4>
+    </div>
+
+
+
+    <div class="card bg-card border-border shadow-lg">
+      <div class="row g-0">
+
+        <!-- IMAGE SIDE -->
+        <div class="col-12 col-lg-5 position-relative order-1 order-lg-2">
+          <img src="assets/images/contact.jfif" class="contact-img" alt="Developer">
+          <div class="img-overlay"></div>
+
+          <div class="d-flex gap-2 position-absolute bottom-0 end-0 p-4">
+            <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+          </div>
         </div>
-      </div>
 
-      <div class="col-lg-6 text-center mt-4 mt-lg-0">
-        <img src="assets/images/deep2.png" class="img-fluid rounded-4 shadow-lg" style="max-height:500px;">
+        <!-- FORM SIDE -->
+        <div class="col-12 col-lg-7 p-4 p-md-5 order-2 order-lg-1">
+
+          <form (submit)="handleSubmit($event)">
+
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label class="form-label-custom">Name</label>
+                <input type="text"
+                       required
+                       placeholder="Your Name"
+                       class="form-control-custom"
+                    
+                       name="name" />
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label-custom">Email</label>
+                <input type="email"
+                       required
+                       placeholder="your@email.com"
+                       class="form-control-custom"
+                      
+                       name="email" />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label-custom">Subject</label>
+              <input type="text"
+                     required
+                     placeholder="Project Inquiry"
+                     class="form-control-custom"
+                    
+                     name="subject" />
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label-custom">Message</label>
+              <textarea required
+                        rows="4"
+                        placeholder="Tell me about your project..."
+                        class="form-control-custom"
+                        
+                        name="message"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary-custom w-100 py-3 fw-bold text-uppercase">
+              {{ submitted ? 'Message Sent! ✓' : 'Send Message' }}
+            </button>
+
+          </form>
+
+          <!-- CONTACT INFO -->
+          <!-- <div class="mt-5 pt-4 border-top border-border">
+            <div class="row g-3">
+
+              <div class="col-sm-4 d-flex align-items-center gap-2">
+                <div class="icon-box">
+                  <i class="bi bi-envelope-fill"></i>
+                </div>
+                <div>
+                  <p class="mb-0 text-muted small">Email</p>
+                  <p class="mb-0 text-white small">hellomail.com</p>
+                </div>
+              </div>
+
+              <div class="col-sm-4 d-flex align-items-center gap-2">
+                <div class="icon-box">
+                  <i class="bi bi-telephone-fill"></i>
+                </div>
+                <div>
+                  <p class="mb-0 text-muted small">Phone</p>
+                  <p class="mb-0 text-white small">+91 98765 43210</p>
+                </div>
+              </div>
+
+              <div class="col-sm-4 d-flex align-items-center gap-2">
+                <div class="icon-box">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div>
+                  <p class="mb-0 text-muted small">Location</p>
+                  <p class="mb-0 text-white small">India</p>
+                </div>
+              </div>
+
+            </div>
+          </div> -->
+
+        </div>
+
       </div>
     </div>
+
   </div>
 </section>
-
-<!-- ABOUT -->
-<section id="about" class="py-5 bg-dark text-white">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="p-4 bg-black rounded-4 border border-secondary">
-          <h5 class="text-success">Frontend</h5>
-          <p class="text-secondary small">Angular, Bootstrap, Responsive UI</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="p-4 bg-black rounded-4 border border-secondary">
-          <h5 class="text-success">Backend</h5>
-          <p class="text-secondary small">.NET Core, APIs, SQL Server</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="p-4 bg-black rounded-4 border border-secondary">
-          <h5 class="text-success">Full Stack</h5>
-          <p class="text-secondary small">End-to-End scalable apps</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="py-5 bg-black text-white">
-  <div class="container">
-    <h2 class="mb-4">Featured Work</h2>
-
-    <div class="p-4 mb-3 bg-dark rounded-4 border border-secondary">
-      <small class="text-success">2026 — Web App</small>
-      <h5>SaaS Analytics Dashboard</h5>
-    </div>
-
-    <div class="p-4 mb-3 bg-dark rounded-4 border border-secondary">
-      <small class="text-success">2025 — E-commerce</small>
-      <h5>Modern Online Store</h5>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer id="contact" class="py-5 bg-dark text-center text-white border-top border-secondary">
-  <div class="container">
-    <h4 class="mb-3">Let’s build something great.</h4>
-    <p class="text-secondary small">© 2026 Deep Singh</p>
-  </div>
-</footer>
